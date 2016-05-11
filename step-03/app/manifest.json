@@ -1,0 +1,15 @@
+{
+  "short_name": "Redder",
+  "name": "Redder",
+  "icons": [
+    {
+      "src":"images/dog155x155.png",
+      "sizes": "155x155",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fff",
+  "theme_color": "#3f51b5",
+  "display": "standalone"
+}
