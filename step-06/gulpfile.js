@@ -24,6 +24,17 @@ gulp.task('make-service-worker', function(callback) {
 	swPrecache.write(path.join(rootDir, 'serviceworker.js'), {
 		staticFileGlobs: [rootDir + '/**/*.{html,css,png,jpg,gif}',
 						  rootDir + '/js/*.js'],
-    	stripPrefix: rootDir
+    	stripPrefix: rootDir,
+		importScripts: ['sync.js'],
+		runtimeCaching: [
+		{
+			urlPattern: /https:\/\/www\.reddit\.com\/r\/\w{1,255}\.json/,
+			handler: 'networkFirst',
+			options: {
+				cache: {
+					name: 'titles'
+				}
+			}
+		}]
 	});
 });
