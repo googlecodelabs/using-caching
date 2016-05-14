@@ -56,7 +56,6 @@ gulp.task('make-service-worker', function(callback) {
 			     	name: 'articles'
 			    }
 			  }
-		}],
-		verbose: true
+		}]
 	}, callback);
 });

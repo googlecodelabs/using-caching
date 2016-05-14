@@ -36,7 +36,6 @@ gulp.task('make-service-worker', function(callback) {
 					name: 'titles'
 				}
 			}
-		}],
-		verbose: true
+		}]
 	});
 });
